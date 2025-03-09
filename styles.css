@@ -1,0 +1,413 @@
+/* Import warrior-themed fonts */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&family=Russo+One&family=Cinzel+Decorative:wght@700&family=Quicksand:wght@400;500&display=swap');
+
+/* Navigation Styles */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 1.5rem;
+    letter-spacing: 2px;
+}
+
+.nav-item:first-child {
+    margin-left: 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 1.5rem;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff00ff, #00ffff, transparent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    color: #fff;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-link.active {
+    color: #00ffff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+
+body {
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+    background-size: 400% 400%;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s, gradientBG 15s ease infinite;
+    position: relative;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Add overlay for better text readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Title - Warrior Style */
+.title {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    transform: skewX(-15deg);
+    text-shadow: 
+        0 0 5px #000000,  
+        0 0 10px #222222,  
+        0 0 20px #444444,  
+        0 0 40px #000000,  
+        0 0 80px #000000;
+    animation: blackGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Description - Strong and Clear */
+.description {
+    font-size: 1.8em;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 5px #000000,  
+        0 0 10px #222222,  
+        0 0 20px #444444,  
+        0 0 40px #000000;
+    margin: 20px 0;
+}
+
+/* Gallery Title - Warrior Style */
+.gallery-title {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    transform: skewX(-15deg);
+    text-shadow: 0 0 5px #000000, 0 0 10px #222222;
+    animation: blackGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Smooth Shadow Glow Animation */
+@keyframes blackGlow {
+    0% {
+        text-shadow: 
+            0 0 5px #000000,  
+            0 0 10px #222222,  
+            0 0 20px #444444,  
+            0 0 40px #000000,  
+            0 0 80px #000000;
+    }
+    100% {
+        text-shadow: 
+            0 0 10px #222222,  
+            0 0 20px #444444,  
+            0 0 40px #000000,  
+            0 0 80px #000000,  
+            0 0 100px #000000;
+    }
+}
+
+/* Import a fantasy, ninja-style font */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+body {
+    background-image: url('dfg.jpg');
+    background-size: cover;
+    font-family: 'UnifrakturMaguntia', cursive; /* Legendary Calligraphy Font */
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+/* Ninja Shadow Thunder Glow Effect */
+.title, .description {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 5px #000000,   /* Deep Black Core */
+        0 0 10px #222222,  /* Dark Shadow Glow */
+        0 0 20px #444444,  /* Stronger Outer Black */
+        0 0 40px #000000,  /* Intense Black Thunder */
+        0 0 80px #000000;  /* Faint Ninja Aura */
+    animation: blackGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Smooth Shadow Glow Animation */
+@keyframes blackGlow {
+    0% {
+        text-shadow: 
+            0 0 5px #000000,  
+            0 0 10px #222222,  
+            0 0 20px #444444,  
+            0 0 40px #000000,  
+            0 0 80px #000000;
+    }
+    100% {
+        text-shadow: 
+            0 0 10px #222222,  
+            0 0 20px #444444,  
+            0 0 40px #000000,  
+            0 0 80px #000000,  
+            0 0 100px #000000;
+    }
+}
+
+/* Background and Typography */
+body {
+    font-family: 'NinjaFont', sans-serif;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+/* Section Styling */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 100px 20px;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0s linear 0.6s;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.section.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+.title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 3.5em;
+    animation: slideIn 1s;
+    transform: none;
+    letter-spacing: 3px;
+    line-height: 1.4;
+}
+
+.description {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6em;
+    animation: slideIn 1.5s;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    white-space: pre-line;
+}
+
+/* Icon Styling */
+.icon-container {
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Photo Gallery Styles */
+.photo-gallery {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.gallery-title {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    transform: skewX(-15deg);
+    text-shadow: 0 0 5px #000000, 0 0 10px #222222;
+    animation: blackGlow 1.5s infinite alternate ease-in-out;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.gallery-item:hover img {
+    filter: brightness(1.2);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border: 2px solid #444;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: url('ninja-blade.png'), auto;
+}
+
+.nav-link, .gallery-item, .close-button {
+    cursor: url('star.png'), pointer;
+}
+
+.nav-link:hover, .gallery-item:hover, .close-button:hover {
+    cursor: url('star.png'), pointer;
+    transform: scale(1.05);
+}
+
+.close-button:hover {
+    transform: rotate(90deg);
+}
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}

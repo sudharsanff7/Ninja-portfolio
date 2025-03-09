@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ninja Theme</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+    <video autoplay muted loop id="bgVideo" class="background-video">
+        <source src="fg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <section id="home" class="section active">
+        <h1 class="title">Welcome to My Website</h1>
+        <p class="description">Home – Welcome!
+            🔥 "Design. Develop. Deliver." 🔥
+            
+            ✅ Passionate about creating stunning designs and seamless user experiences.
+            ✅ Transforming ideas into reality through creative design and code.
+            ✅ Focused on innovation, aesthetics, and functionality.
+            ✅ Always learning, evolving, and pushing creative boundaries.
+            
+            Let me know if you want any tweaks! 🚀</p>
+    </section>
+
+    <section id="about" class="section">
+        <h1 class="title">About Me</h1>
+        <p class="description">About Me – My Story
+            ✨ "Designing with Passion, Developing with Precision!" ✨
+            
+            ✅ Creative designer & developer with a keen eye for detail.
+            ✅ Specializing in UI/UX, web development, and branding.
+            ✅ Passionate about building user-friendly and visually appealing experiences.
+            ✅ Always exploring new trends and technologies to stay ahead.
+            ✅ Beyond work, I love experimenting with new ideas and creative challenges.
+            
+            Let me know if you need any refinements! 🚀</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h1 class="title">My Projects</h1>
+        <p class="description">Projects – My Work, My Pride!
+            🚀 "Bringing Ideas to Life Through Design & Code!" 🚀
+            Here are some of my best projects that showcase my skills and creativity:
+            ✅ Designed and developed engaging websites and UI/UX prototypes.
+            ✅ Used technologies like Figma, JavaScript, and React for seamless user experiences.
+            ✅ Focused on responsiveness, aesthetics, and user-centric designs.</p>
+    </section>
+
+    <section id="gallery" class="section">
+        <h1 class="title">My Gallery</h1>
+        <p class="description">Showcasing my digital artistry</p>
+        <div class="photo-gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img1.jpg" alt="Photo 1" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img2.jpg" alt="Photo 2" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img3.jpg" alt="Photo 3" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="img4.jpg" alt="Photo 4" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h1 class="title">Contact Me</h1>
+        <p class="description">Contact Information – Let’s Connect!
+            📩 "Have an Idea? Let’s Make It Happen!" 📩
+            📧 Email: [Your Email]
+            🔗 LinkedIn: [Your LinkedIn]
+            📷 Instagram: [Your Instagram]
+            📞 Let’s work together! Drop a message, and I’ll get back to you soon.</p>
+    </section>
+
+    <!-- Modal for full-size image display -->
+    <div class="modal" id="imageModal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
