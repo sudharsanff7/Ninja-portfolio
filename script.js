@@ -61,3 +61,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Mobile Navigation Menu
+const hamburger = document.querySelector('.hamburger');
+const navList = document.querySelector('.nav-list');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Toggle navigation menu
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navList.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navList.classList.remove('active');
+    });
+});
+
+// Image Modal Functionality
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const closeButton = document.querySelector('.close-button');
+const galleryImages = document.querySelectorAll('.gallery-item img');
+
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+    });
+});
+
+closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+

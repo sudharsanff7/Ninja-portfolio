@@ -411,3 +411,84 @@ body {
     object-fit: cover;
     z-index: -2;
 }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        padding: 0.5rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 2rem 0;
+        transition: top 0.3s ease;
+    }
+
+    .nav-list.active {
+        top: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .title {
+        font-size: 2.5em;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .description {
+        font-size: 1.2em;
+        padding: 0 1rem;
+        text-align: left;
+        margin: 1rem auto;
+    }
+
+    .section {
+        padding: 80px 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        margin-bottom: 1rem;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
